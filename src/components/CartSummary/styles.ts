@@ -21,6 +21,26 @@ export const Title = styled.h2`
   color: #C73A0F;
 `;
 
+export const EmptyCartContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 25px 0;
+`;
+
+export const CartImage = styled.img`
+  width: 130px;
+  height: auto;
+`;
+
+export const EmptyMessage = styled.p`
+  font-size: 14px;
+  font-weight: 600;
+  color: #87635a;
+`;
+
 export const CartList = styled.ul`
   list-style: none;
   padding: 0;
