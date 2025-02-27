@@ -45,7 +45,7 @@ export function CartSummary() {
                 <ItemDetails>
                   <ItemTitle>{item.title}</ItemTitle>
                   <Price>
-                    <Quantity>{item.quantity}x</Quantity> @ R$ {item.price.toFixed(2)} <Total>R$ {(item.price * item.quantity).toFixed(2)}</Total>
+                    <Quantity>{item.quantity}x</Quantity> @ $ {item.price.toFixed(2)} <Total>$ {(item.price * item.quantity).toFixed(2)}</Total>
                   </Price>
                 </ItemDetails>
                 <RemoveButton onClick={() => removeFromCart(item.id)}><IoCloseCircleOutline size={20} color="87635a" /></RemoveButton>
@@ -54,7 +54,7 @@ export function CartSummary() {
           </CartList>
           <OrderTotal>
             <span>Order Total</span>
-            <TotalPrice>R$ {totalPrice.toFixed(2)}</TotalPrice>
+            <TotalPrice>$ {totalPrice.toFixed(2)}</TotalPrice>
           </OrderTotal>
           <CarbonNeutral>
             <RiTreeLine size={22} color='1EA575' />
