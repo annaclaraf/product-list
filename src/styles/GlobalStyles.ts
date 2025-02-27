@@ -11,4 +11,8 @@ export const GlobalStyles = createGlobalStyle`
     background: #fcf8f5;
     font-family: "Red Hat Text", serif;
   }
+
+  button {
+    font-family: "Red Hat Text", serif;
+  }
 `;
