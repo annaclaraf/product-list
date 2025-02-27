@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { useCartContext } from "../../contexts/CartContext";
 import { RiTreeLine } from "react-icons/ri";
 import { IoCloseCircleOutline } from "react-icons/io5";
+import { CartModal } from "../CartModal";
 import { 
   Container,
   EmptyCartContainer,
@@ -23,6 +25,8 @@ import {
 
 export function CartSummary() {
   const { cart, removeFromCart } = useCartContext();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
@@ -56,9 +60,11 @@ export function CartSummary() {
             <RiTreeLine size={22} color='1EA575' />
             <span>This is a <strong>carbon-neutral</strong> delivery</span>
           </CarbonNeutral>
-          <CheckoutButton>Confirm Order</CheckoutButton>
+          <CheckoutButton onClick={() => setIsModalOpen(true)}>Confirm Order</CheckoutButton>
         </>
       )}
+
+      <CartModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}/>
     </Container>
   );
 }

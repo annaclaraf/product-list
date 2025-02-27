@@ -41,5 +41,5 @@ export function useCart() {
   };
   
 
-  return { cart, addToCart, removeFromCart, updateQuantity };
+  return { cart, setCart, addToCart, removeFromCart, updateQuantity };
 };
